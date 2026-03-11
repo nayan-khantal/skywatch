@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="png" href="img/icon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <title>SkyWatch — Search</title>
+</head>
+<body>
+  <div id="screen">
+    <h3>Find a City</h3>
+
+    <!-- Search Bar -->
+    <div class="search">
+      <div class="search-icon"><i class="fa-solid fa-location-dot"></i></div>
+      <input class="searchinput" type="text" placeholder="Enter city name..." />
+    </div>
+
+    <!-- Default Message -->
+    <div class="message">
+      <p>Search by city, state, or country to get live weather details.</p>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message">
+      <p>City not found. Please check the spelling and try again.</p>
+    </div>
+
+    <!-- Weather Result -->
+    <div class="return">
+      <div class="box">
+        <div class="weather-box">
+          <div class="name">
+            <div class="city-name">--</div>
+            <div class="weather-temp">--°</div>
+          </div>
+          <div class="weather-icon"><img class="weather-img" src="img/sun.png" alt="weather" /></div>
+        </div>
+
+        <!-- Stats Row 1 -->
+        <div class="weather-desc">
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-wind"></i></div>
+            <div class="desc-name">Wind</div>
+            <div class="desc-info wind">-- m/s</div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-temperature-full"></i></div>
+            <div class="desc-name">Pressure</div>
+            <div class="desc-info pressure">-- hPa</div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-droplet"></i></div>
+            <div class="desc-name">Humidity</div>
+            <div class="desc-info humidity">--%</div>
+          </div>
+        </div>
+
+        <!-- Stats Row 2 -->
+        <div class="weather-desc">
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-sun"></i></div>
+            <div class="desc-name">Sunrise</div>
+            <div class="desc-info sunrise">--:--</div>
+          </div>
+          <div class="desc-box">
+            <div class="desc-icon"><i class="fa-solid fa-cloud-sun"></i></div>
+            <div class="desc-name">Sunset</div>
+            <div class="desc-info sunset">--:--</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nav -->
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-location-arrow"></i></a></li>
+        <li><a class="active" href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        <li><a href="world.html"><i class="fa-solid fa-earth-americas"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+  <script src="js/search.js"></script>
+</body>
+</html>

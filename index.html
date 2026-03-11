@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="png" href="img/icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>SkyWatch</title>
+  </head>
+  <body>
+<button id="darkToggle" style="position:fixed;top:10px;right:10px;">🌙</button>
+<div id="loader">Loading weather...</div>
+
+    <div id="screen">
+      <!-- City Name -->
+      <div class="city-name">
+        <i class="fa-solid fa-map-pin"></i>
+        <h1 id="city-name">Loading...</h1>
+      </div>
+
+      <!-- Weather Icon -->
+      <div class="weather-icon-css">
+        <img class="weather-icon" src="img/sun.png" alt="weather" />
+      </div>
+
+      <!-- Weather Details -->
+      <div class="weather-description">
+        <div class="show-metric" id="metric">--°</div>
+        <div class="weather-details">
+          <div class="weather-main-label" id="weather-main">--</div>
+          <div class="h-f">
+            <div class="show-humidity">H: <span id="humidity">--</span></div>
+            &nbsp;|&nbsp;
+            <div class="show-humidity">F: <span id="feels-like">--</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- °C / °F Toggle -->
+      <div class="unit-toggle">
+        <button id="unit-btn" class="active-unit" onclick="toggleUnit()">Switch to °F</button>
+      </div>
+
+      <!-- Forecast Box -->
+      <div class="forcasts-box">
+        <div class="today-forecast">
+          <h4>TODAY</h4>
+          <div class="weather-icon-today">
+            <img class="weather-icons" src="img/sun.png" alt="today" />
+          </div>
+          <div class="temp-today">
+            <span id="temp-min-today">--°</span><span> / </span><span id="temp-max-today">--°</span>
+          </div>
+          <div class="weather-main-today" id="weather-main-today">--</div>
+        </div>
+
+        <!-- 6-Day Forecast -->
+        <div class="future-forecast">
+          <h5>6-DAY FORECAST</h5>
+          <div id="future-forecast-box"></div>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html"><i class="fa-solid fa-location-arrow"></i></a></li>
+          <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><a href="world.html"><i class="fa-solid fa-earth-americas"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

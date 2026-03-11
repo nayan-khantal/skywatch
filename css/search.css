@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --accent: #e94560;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --text-light: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.65);
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+}
+
+#screen {
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  background: rgba(233, 69, 96, 0.15);
+  border-top: 1px solid rgba(233, 69, 96, 0.3);
+  z-index: 100;
+}
+
+nav ul { display: flex; gap: 2.5rem; }
+nav ul li a { color: var(--text-muted); font-size: 18px; text-decoration: none; }
+
+.active {
+  background: var(--accent);
+  color: var(--text-light) !important;
+  border-radius: 100px;
+  padding: 8px 16px;
+}
+
+h3 {
+  color: var(--text-light);
+  text-align: center;
+  padding: 30px 0 20px;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.search {
+  width: 320px;
+  height: 48px;
+  margin: 0 auto;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid rgba(233, 69, 96, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.search-icon { width: 18px; height: 48px; display: flex; justify-content: center; align-items: center; padding-left: 14px; }
+.search-icon i { font-size: 16px; color: var(--accent); }
+
+.search input {
+  width: 85%;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--text-light);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.search input::placeholder { color: var(--text-muted); }
+
+.error-message { display: none; }
+.error-message p {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+}
+
+.message { display: block; }
+.message p {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 50px;
+  font-size: 14px;
+}
+
+.return { display: none; }
+
+.box {
+  max-width: 400px;
+  height: auto;
+  display: grid;
+  place-content: center;
+  margin: 40px auto 100px;
+}
+
+.weather-box {
+  height: 200px;
+  max-width: 350px;
+  border-radius: 24px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--accent), #c62a47);
+  box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+}
+
+.name {
+  padding-left: 36px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-light);
+}
+
+.city-name { font-size: 18px; font-weight: 500; }
+.weather-temp { font-size: 58px; font-weight: 700; }
+
+.weather-icon {
+  padding: 0 16px;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-icon img { width: 100%; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3)); }
+
+.weather-desc { display: flex; justify-content: center; column-gap: 10px; flex-wrap: wrap; }
+
+.desc-box {
+  width: 100px;
+  display: grid;
+  padding: 14px;
+  gap: 4px;
+  height: 108px;
+  margin-top: 10px;
+  border-radius: 20px;
+  justify-content: start;
+  align-items: center;
+  color: var(--text-light);
+  background: var(--card-bg);
+  border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.desc-icon i { color: var(--accent); font-size: 16px; }
+.desc-name { font-size: 12px; color: var(--text-muted); }
+.desc-info { font-size: 14px; font-weight: 600; }
+
+@media screen and (min-width: 430px) {
+  #screen {
+    max-width: 50%;
+    min-width: 450px;
+    height: 100%;
+    margin: 50px auto;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    margin-bottom: 120px;
+  }
+  nav { border-radius: 20px; width: 100%; bottom: 0; position: relative; }
+  .box { max-width: 500px; }
+  .weather-box { max-width: 400px; height: 200px; }
+  .desc-box { width: 120px; height: 115px; }
+}
