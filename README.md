@@ -101,18 +101,6 @@ Simply open **index.html** in your browser.
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots here after uploading them)*
-
-Example:
-
-```
-screenshots/
-home.png
-search.png
-explore.png
-```
 
 ---
 
